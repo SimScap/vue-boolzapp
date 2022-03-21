@@ -16,6 +16,14 @@
     height: 50px;
     background-color: rgb(199, 195, 191);
 }
+div.user img{
+    border-radius: 50%;
+    width: 40px;
+}
+/* .right-side-container-bottom input{
+    
+
+} */
 .right-side-main{
     background-color: aquamarine;
     height: calc(100% - 100px);
@@ -36,4 +44,13 @@ div .banner{
     border: 2px solid black;
     height: 100%;
     width: 40%;
+}
+.right-side-left-tools,
+.right-side-right-tools{
+    border: 2px solid black;
+    width: 15%;
+}
+.right-side-central-input{
+    width: calc(100% - 30%);
+    border:2px solid red;
 }

@@ -12,13 +12,20 @@
     <title>Document</title>
 </head>
 <body>
-    <main>
+    <main id="app">
         <div class="container">
             <div class="row g-0">
                 <div class="col-4 left-side-container">
                     <div class="left-side-container-top d-flex justify-content-between">
-                        <div class="user"></div>
-                        <div class="user-tools"></div>
+                        <div class="user">
+                            <img src="/img/avatar_io.jpg" class="img-fluid  "  alt="">
+                            <span>Sofia</span>
+                        </div>
+                        <div class="user-tools d-flex justify-content-end ">
+                            <i class="fas fa-circle-notch"></i>
+                            <i class="fas fa-comment"></i>
+                            <i class="fas fa-align-center"></i>
+                        </div>
                     </div>
                     <div class="banner"></div>
                     <input type="text" name="search" id="search" placeholder="Cerca o inizia una nuova chat">
@@ -26,13 +33,24 @@
 
                 </div>
                 <div class="col-8 right-side-container">
-                    <div class="right-side-container-top">
+                    <div class="right-side-container-top d-flex justify-content-between">
+                        <div class="user"></div>
+                        <div class="user-tools"></div>
                 </div>
 
                 <div class="right-side-main"></div>
 
 
-                <div class="right-side-container-bottom">
+                <div class="right-side-container-bottom d-flex ">
+
+                    <div class="right-side-left-tools">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+                    <div class="right-side-central-input">
+                        <input type="text" class="w-100" placeholder="Scrivi un messaggio...">
+                    </div>
+                    <div class="right-side-right-tools"></div>
+
                 </div>
             </div>
         </div>
