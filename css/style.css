@@ -1,0 +1,30 @@
+.container{
+    border: 2px solid green;
+    height: 800px;
+}
+.left-side-container{
+    border: 2px solid red;
+    height: 800px;
+}
+.right-side-container{
+    border: 2px solid gold;
+    height: 800px;
+}
+.left-side-container-top{
+    height: 50px;
+    background-color: rgb(199, 195, 191);
+
+}
+.right-side-container-top{
+    height: 50px;
+    background-color: rgb(199, 195, 191);
+
+}
+.right-side-container-bottom{
+    height: 50px;
+    background-color: rgb(199, 195, 191);
+}
+.right-side-main{
+    background-color: aquamarine;
+    height: calc(100% - 100px);
+}
