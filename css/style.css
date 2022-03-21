@@ -1,5 +1,4 @@
 .container{
-    border: 2px solid green;
     height: 800px;
 }
 .left-side-container{
@@ -10,21 +9,31 @@
     border: 2px solid gold;
     height: 800px;
 }
-.left-side-container-top{
-    height: 50px;
-    background-color: rgb(199, 195, 191);
-
-}
-.right-side-container-top{
-    height: 50px;
-    background-color: rgb(199, 195, 191);
-
-}
-.right-side-container-bottom{
+.left-side-container-top,
+.right-side-container-top,
+.right-side-container-bottom
+{
     height: 50px;
     background-color: rgb(199, 195, 191);
 }
 .right-side-main{
     background-color: aquamarine;
     height: calc(100% - 100px);
+}
+div .banner{
+    background-color: rgb(142, 218, 252);
+    height: 4rem;
+}
+#search{
+    width: 100%;
+}
+.user{
+    border: 2px solid black;
+    height: 100%;
+    width: 40%;
+}
+.user-tools{
+    border: 2px solid black;
+    height: 100%;
+    width: 40%;
 }
