@@ -25,7 +25,7 @@ div.user img{
 
 } */
 .right-side-main{
-    background-color: aquamarine;
+    background-image: url('../img/mine.jpg');
     height: calc(100% - 100px);
 }
 div .banner{
@@ -53,4 +53,19 @@ div .banner{
 .right-side-central-input{
     width: calc(100% - 30%);
     border:2px solid red;
+}
+
+img.contact-img{
+    width: 50px;
+    border-radius: 50%;
+}
+
+.prova{
+    display: inline-block;
+}
+ul{
+    list-style-type: none;
+}
+.fa-bell-slash{
+    font-size: 1.5rem;
 }
