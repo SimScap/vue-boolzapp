@@ -71,11 +71,13 @@ ul{
     background-color: gray;
 }
 
-.my-chat{
+.sent{
     background-color: lightgreen;
     align-self: flex-end;
+    border-radius: 40px;
 }
-.my-sent-chat{
+.received{
     background-color:white;
     align-self: flex-start;
+    border-radius: 40px;
 }
