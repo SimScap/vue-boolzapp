@@ -80,7 +80,8 @@
                         <i class="fa-solid fa-face-smile align-self-center"></i>
                     </div>
                     <div class="right-side-central-input">
-                        <input type="text" class="w-100 mt-2" placeholder="Scrivi un messaggio...">
+                        <input type="text" class="w-100 mt-2" placeholder="Scrivi un messaggio..." v-model="newContent"
+                        @keyup.enter="sendNewContent(contacts, activeIndex, newContent)">
                     </div>
                     <div class="right-side-right-tools d-flex justify-content-center">
                         <i class="fa-solid fa-microphone align-self-center"></i>

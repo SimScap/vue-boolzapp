@@ -3,6 +3,7 @@ const app = new Vue({
     data : {
         activeIndex : 0,
         search: "",
+        content:"",
         contacts: [
             {
                 name: 'Michele',
@@ -172,8 +173,18 @@ const app = new Vue({
         chatSwap(currentIndex) {
             this.activeIndex = currentIndex;
         },
+
+        sendNewContent(contacts, currentIndex, newContent ){
+            const content = {
+                message: newContent,
+                status: 'sent',
+            };
+            if (newContent.trim() != ''){
+                contacts[currentIndex].messages.push(content)
+            }
+        }
      
     
     },
-})
+});
 
