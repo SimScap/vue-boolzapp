@@ -1,6 +1,4 @@
-.container{
-    height: 800px;
-}
+
 .left-side-container{
     border: 2px solid red;
     height: 800px;
@@ -18,12 +16,8 @@
 }
 div.user img{
     border-radius: 50%;
-    width: 40px;
+    width: 50px;
 }
-/* .right-side-container-bottom input{
-    
-
-} */
 .right-side-main{
     background-image: url('../img/mine.jpg');
     height: calc(100% - 100px);
@@ -36,30 +30,25 @@ div .banner{
     width: 100%;
 }
 .user{
-    border: 2px solid black;
+    
     height: 100%;
-    width: 40%;
+    width: 60%;
 }
 .user-tools{
-    border: 2px solid black;
     height: 100%;
-    width: 40%;
+    width: 20%;
 }
 .right-side-left-tools,
 .right-side-right-tools{
-    border: 2px solid black;
     width: 15%;
 }
 .right-side-central-input{
     width: calc(100% - 30%);
-    border:2px solid red;
 }
-
 img.contact-img{
     width: 50px;
     border-radius: 50%;
 }
-
 .prova{
     display: inline-block;
 }
@@ -67,5 +56,23 @@ ul{
     list-style-type: none;
 }
 .fa-bell-slash{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    background-color: white;
+    border-radius: 50%;
+    border: 10px solid white;
+    vertical-align: text-bottom;
+}
+
+.my-thumbnail:active{
+    background-color: red;
+}
+.my-thumbnail:hover{
+    background-color: gray;
+}
+
+.my-chat{
+    background-color: white;
+}
+.my-sent-chat{
+    background-color: lightgreen;
 }

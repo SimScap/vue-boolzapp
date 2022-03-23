@@ -16,35 +16,29 @@
     <main id="app">
         <div class="container">
             <div class="row g-0">
-                <div class="col-4 left-side-container">
+                <div class="col-5 left-side-container">
                     <div class="left-side-container-top d-flex justify-content-between">
-                        <div class="user">
-                            <img src="/img/avatar_io.jpg" class="img-fluid  "  alt="">
+                        <div class="user ">
+                            <img src="/img/avatar_io.jpg" class="img-fluid" alt="">
                             <span>Sofia</span>
                         </div>
-                        <div class="user-tools d-flex justify-content-end ">
-                            <i class="fa-solid fa-circle-notch"></i>
-                            <i class="fa-solid fa-message"></i>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <div class="user-tools d-flex justify-content-around ">
+                            <i class="fa-solid fa-circle-notch align-self-center"></i>
+                            <i class="fa-solid fa-message align-self-center"></i>
+                            <i class="fa-solid fa-ellipsis-vertical align-self-center"></i>
                         </div>
                     </div>
-                    <div class="banner">
+                    <div class="banner p-1">
                         <i class="fas fa-bell-slash"></i>
                         
                             <ul class="prova">
-                                <li class="fw-bold">fdafdfd</li>
+                                <li> Ricevi notifiche di nuovi messaggi</li>
                                 <li>fdsfdsfdf</li>
                             </ul>
                 
-                  
-                   
-                            <!-- <span> Ricevi notifiche di nuovi messaggi</span>
-                            <a href="">Attiva notifiche desktop</a> -->
-                     
-                        
                     </div>
-                    <input  type="text" name="search" id="search" placeholder="Cerca o inizia una nuova chat">
-                    <div v-for="element in contacts" class="position-relative">
+                    <input v-model="search" type="text" name="search" id="search" placeholder="Cerca o inizia una nuova chat">
+                    <div @click="chatSwap(index)" v-for="(element, index) in contacts" class="position-relative my-thumbnail" :class="(index === activeIndex) ? 'active' : ''">
                         <img :src="'./img/avatar' + element.avatar + '.jpg'" alt="" class="img-fluid contact-img align-top">
                         <ul class="prova">
                             <li class="fw-bold">{{element.name}}</li>
@@ -55,37 +49,49 @@
 
 
                 </div>
-                <div class="col-8 right-side-container">
+                <div class="col-7 right-side-container">
                     <div class="right-side-container-top d-flex justify-content-between">
-                        <div class="user">
-                            <img src="" alt="">
+                        <div class="user d-flex" >
+                            <img :src="'./img/avatar' + contacts[activeIndex].avatar + '.jpg'" alt="" class="img-fluid">
+                            <ul>
+                                <li class="fw-bold">{{contacts[activeIndex].name }}</li>
+                                <li>Ultimo accesso oggi alle 12</li>
+                            </ul>
+                            
                         </div>
-                        <div class="user-tools"></div>
+                        <div class="user-tools d-flex justify-content-around">
+                            <i class="fa-solid fa-magnifying-glass align-self-center"></i>
+                            <i class="fa-solid fa-paperclip align-self-center"></i>
+                            <i class="fa-solid fa-ellipsis-vertical align-self-center"></i>
+                        </div>
                 </div>
 
-                <div class="right-side-main">
-                    <div class=""></div>
+                <div class="right-side-main ">
+                    <div v-for="(messages,element,index) in activeIndex"></div>
+                
                 </div>
 
 
                 <div class="right-side-container-bottom d-flex ">
 
-                    <div class="right-side-left-tools">
-                        <i class="fa-solid fa-face-smile"></i>
+                    <div class="right-side-left-tools d-flex justify-content-center">
+                        <i class="fa-solid fa-face-smile align-self-center"></i>
                     </div>
                     <div class="right-side-central-input">
-                        <input type="text" class="w-100" placeholder="Scrivi un messaggio...">
+                        <input type="text" class="w-100 mt-2" placeholder="Scrivi un messaggio...">
                     </div>
-                    <div class="right-side-right-tools">
-                        <i class="fa-solid fa-microphone"></i>
+                    <div class="right-side-right-tools d-flex justify-content-center">
+                        <i class="fa-solid fa-microphone align-self-center"></i>
                     </div>
 
                 </div>
             </div>
         </div>
 
+        <!-- :class="(messages.status === 'sent') ? 'my-sent-chat , offset-6' : 'my-chat'">  -->
 
     </main>
     <script type="text/javascript" src="js/main.js"></script>  
 </body>
 </html>
+

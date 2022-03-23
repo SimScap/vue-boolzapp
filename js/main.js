@@ -1,6 +1,8 @@
 const app = new Vue({
     el:'#app',
     data : {
+        activeIndex : 0,
+        search: "",
         contacts: [
             {
                 name: 'Michele',
@@ -163,15 +165,15 @@ const app = new Vue({
                     }
                 ],
             }
-        ]
-    
-        
-        
-        
-        
-        
+        ],   
+
+    },
+    methods: {  
+        chatSwap(currentIndex) {
+            this.activeIndex = currentIndex;
+        },
+     
     
     },
-
 })
 
