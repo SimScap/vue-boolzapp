@@ -21,6 +21,7 @@ div.user img{
 .right-side-main{
     background-image: url('../img/mine.jpg');
     height: calc(100% - 100px);
+    overflow-y: auto;
 }
 div .banner{
     background-color: rgb(142, 218, 252);
@@ -63,16 +64,18 @@ ul{
     vertical-align: text-bottom;
 }
 
-.my-thumbnail:active{
-    background-color: red;
+.my-thumbnail.active{
+    background-color: lightgray;
 }
 .my-thumbnail:hover{
     background-color: gray;
 }
 
 .my-chat{
-    background-color: white;
+    background-color: lightgreen;
+    align-self: flex-end;
 }
 .my-sent-chat{
-    background-color: lightgreen;
+    background-color:white;
+    align-self: flex-start;
 }

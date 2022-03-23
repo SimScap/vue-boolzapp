@@ -38,7 +38,7 @@
                 
                     </div>
                     <input v-model="search" type="text" name="search" id="search" placeholder="Cerca o inizia una nuova chat">
-                    <div @click="chatSwap(index)" v-for="(element, index) in contacts" class="position-relative my-thumbnail" :class="(index === activeIndex) ? 'active' : ''">
+                    <div @click="chatSwap(index)" v-for="(element, index) in contacts" class="position-relative my-thumbnail" :class="(activeIndex === index) ? 'active' : ''">
                         <img :src="'./img/avatar' + element.avatar + '.jpg'" alt="" class="img-fluid contact-img align-top">
                         <ul class="prova">
                             <li class="fw-bold">{{element.name}}</li>
@@ -66,9 +66,11 @@
                         </div>
                 </div>
 
-                <div class="right-side-main ">
-                    <div v-for="(messages,element,index) in activeIndex"></div>
-                
+                <div class="right-side-main d-flex flex-column p-5">
+                   <div v-for="message in contacts[activeIndex].messages" class=" mb-2 p-2" :class="(message.status == 'received') ? 'received' : 'sent'">
+                       {{message.message}}
+                   </div>
+                       
                 </div>
 
 
