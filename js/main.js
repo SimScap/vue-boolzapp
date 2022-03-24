@@ -5,7 +5,7 @@ const app = new Vue({
         search: "",
         content:"",
         clicked: true,
-        response:['ok'],
+        response:['Ciao'],
         contacts: [
             {
                 name: 'Michele',
@@ -173,7 +173,8 @@ const app = new Vue({
     },
     methods: {
         responseReceived: function(){
-            return this.response
+
+            return this.response[0]
         },
         
         chatSwap(currentIndex) {
@@ -200,7 +201,7 @@ const app = new Vue({
 
             setTimeout( () => {
                 this.contacts[currentIndex].messages.push({
-                    text : this.responseReceived(),
+                    message : this.responseReceived(),
                     status : 'received',
             })
             }, 1000)

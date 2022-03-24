@@ -44,7 +44,7 @@
                             <li class="fw-bold">{{element.name}}</li>
                             <li>Ultimo messaggio inviato</li>
                         </ul>
-                        <span class="position-absolute end-0">12:00</span>
+                        <span class="position-absolute end-0 px-2">12:00</span>
                     </div>
 
 
@@ -69,7 +69,7 @@
                 <div class="right-side-main d-flex flex-column p-5">
                    <div v-for="(message, contentIndex) in contacts[activeIndex].messages" class=" mb-2 p-2  deleteIcon" :class="(message.status == 'received') ? 'received' : 'sent'" :class="'ciao'">
                        {{message.message}}
-                   <span @click="deleteContent(contentIndex)" >.... </span>
+                   <span @click="deleteContent(contentIndex)" >. </span>
 
                    </div>
                    
