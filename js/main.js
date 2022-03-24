@@ -4,6 +4,8 @@ const app = new Vue({
         activeIndex : 0,
         search: "",
         content:"",
+        clicked: true,
+        risposta:['ok'],
         contacts: [
             {
                 name: 'Michele',
@@ -169,22 +171,42 @@ const app = new Vue({
         ],   
 
     },
-    methods: {  
+    methods: {
         chatSwap(currentIndex) {
-            this.activeIndex = currentIndex;
+            if (this.contacts[currentIndex] === undefined)
+            {
+                console.warn('Indice non valido')
+            } else{
+                this.activeIndex = currentIndex;
+
+            }
         },
 
         sendNewContent(contacts, currentIndex, newContent ){
             const content = {
                 message: newContent,
                 status: 'sent',
+                date: new Date().getHours(),
             };
             if (newContent.trim() != ''){
                 contacts[currentIndex].messages.push(content)
             }
-        }
-     
-    
-    },
+            this.newContent = "";
+            
+        },
+        searchList() {
+            return this.contacts.filter(element => {
+                return element.name.toLowerCase().includes(this.search.toLowerCase())
+            })},
+            
+            deleteContent(contentIndex) {
+                this.contacts[this.activeIndex].messages.splice(contentIndex, 1);
+        },
+
+            rispostaReceived : function(){
+                return this.risposta
+        },           
+        },
+        
 });
 

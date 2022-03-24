@@ -81,3 +81,11 @@ ul{
     align-self: flex-start;
     border-radius: 40px;
 }
+
+.deleteIcon{
+ 
+}
+
+div.deleteIconOff>span:hover{
+    background-color: yellowgreen;
+}
