@@ -5,7 +5,7 @@ const app = new Vue({
         search: "",
         content:"",
         clicked: true,
-        risposta:['ok'],
+        response:['ok'],
         contacts: [
             {
                 name: 'Michele',
@@ -172,6 +172,10 @@ const app = new Vue({
 
     },
     methods: {
+        responseReceived: function(){
+            return this.response
+        },
+        
         chatSwap(currentIndex) {
             if (this.contacts[currentIndex] === undefined)
             {
@@ -193,6 +197,13 @@ const app = new Vue({
             }
             this.newContent = "";
             
+
+            setTimeout( () => {
+                this.contacts[currentIndex].messages.push({
+                    text : this.responseReceived(),
+                    status : 'received',
+            })
+            }, 1000)
         },
         searchList() {
             return this.contacts.filter(element => {
@@ -203,9 +214,8 @@ const app = new Vue({
                 this.contacts[this.activeIndex].messages.splice(contentIndex, 1);
         },
 
-            rispostaReceived : function(){
-                return this.risposta
-        },           
+            
+        
         },
         
 });
